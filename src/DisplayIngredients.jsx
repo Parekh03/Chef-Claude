@@ -10,6 +10,7 @@ export default function DisplayIngredients({ ingredients }) {
 
     async function getRecipe() {
         setButtonClicked(true)
+        setGeneratedRecipe(null)
         const recipe = await getRecipeFromMistral(ingredients)
         setGeneratedRecipe(recipe)
     }
